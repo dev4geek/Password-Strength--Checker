@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Strength Checker</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Password Strength Checker</h1>
+
+    <form action="/check" method="POST">
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            required
+        >
+
+        <button type="submit">
+            Check Strength
+        </button>
+
+    </form>
+
+    {% if strength %}
+
+    <div class="result">
+
+        <h2>Password Strength</h2>
+
+        <h3>{{ strength }}</h3>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
